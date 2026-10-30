@@ -1,0 +1,30 @@
+"""分类复核静态页：直接读取现有CSV/JSON，分页加载，不重复检测或编码。"""
+from pathlib import Path
+import json
+
+
+def write_review_page(output,labels):
+    target=Path(output)/'review.html'
+    target.write_text(PAGE.replace('__LABELS__',json.dumps(labels,ensure_ascii=False)))
+    return target
+
+
+PAGE=r'''<!doctype html><html lang="zh"><meta charset="utf-8"><title>按检出类别复核</title>
+<style>body{max-width:1150px;margin:24px auto;padding:0 14px;font:16px sans-serif;line-height:1.6}select,button{font:inherit;padding:6px;margin:4px}section{border:1px solid #ccc;padding:16px;margin:20px 0}video{max-width:100%;width:800px}summary{cursor:pointer}.bar{position:sticky;top:0;background:white;padding:8px;border-bottom:1px solid #ddd}a{margin-right:12px}</style>
+<h1>按检出类别复核</h1><p><a href="index.html">按任务查看 / 全量进度</a>候选不等于确认损坏，同一回合可命中多项。</p>
+<div class="bar"><label>类别 <select id="category"></select></label><label>状态 <select id="status"><option value="issues">待复核与不通过</option><option>REVIEW</option><option>FAIL</option><option>PASS</option><option value="all">全部</option></select></label><button id="refresh">刷新结果</button><span id="count"></span><p id="state"></p></div>
+<div id="cards"></div><p><button id="prev">上一页</button><span id="page"></span><button id="next">下一页</button></p>
+<script>
+const labels=__LABELS__, $=id=>document.getElementById(id),size=12;let records=[],page=0,revision=0;
+// CSV字段允许引号、逗号和换行，不能直接按逗号split。
+function csv(text){let rows=[],row=[],cell='',quoted=false;for(let i=0;i<text.length;i++){let c=text[i];if(c==='"'){if(quoted&&text[i+1]==='"'){cell+='"';i++;}else quoted=!quoted;}else if(c===','&&!quoted){row.push(cell);cell='';}else if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&text[i+1]==='\n')i++;row.push(cell);if(row.some(Boolean))rows.push(row);row=[];cell='';}else cell+=c;}if(cell||row.length){row.push(cell);rows.push(row);}if(!rows.length)return [];let keys=rows.shift();return rows.map(v=>Object.fromEntries(keys.map((k,i)=>[k,v[i]||''])));}
+function base(){let s=$('status').value;return records.filter(r=>s==='all'||(s==='issues'?r.status!=='PASS':r.status===s));}
+function categories(){let old=$('category').value,c={};for(let r of base())for(let k of new Set(r.reason_codes.split(';').filter(Boolean)))c[k]=(c[k]||0)+1;$('category').replaceChildren(new Option('全部类别',''));for(let k of [...new Set([...Object.keys(labels),...Object.keys(c)])].sort())$('category').add(new Option(`${labels[k]||k}（${c[k]||0}条）`,k));if(old)$('category').value=old;}
+function node(tag,text,parent){let e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(parent)parent.append(e);return e;}
+function video(path,parent){let v=node('video',undefined,parent);v.controls=true;v.preload='none';v.src=path;}
+async function render(){let token=++revision,code=$('category').value,rows=base().filter(r=>!code||r.reason_codes.split(';').includes(code));page=Math.max(0,Math.min(page,Math.max(0,Math.ceil(rows.length/size)-1)));$('count').textContent=`匹配 ${rows.length} 条 / 已完成 ${records.length} 条`;$('page').textContent=` 第 ${page+1} / ${Math.max(1,Math.ceil(rows.length/size))} 页 `;$('prev').disabled=page===0;$('next').disabled=(page+1)*size>=rows.length;$('cards').replaceChildren();
+for(let row of rows.slice(page*size,(page+1)*size)){let card=node('section',undefined,$('cards'));node('h2',`${row.id} / ${row.status}`,card);let content=node('div','读取报告…',card);try{let response=await fetch(row.report,{cache:'no-store'});if(!response.ok)throw Error(`HTTP ${response.status}`);let r=await response.json();if(token!==revision)return;content.replaceChildren();if((r.task_description||[]).length)node('p',r.task_description.join(' / '),content);let reasons=(r.reasons||[]).filter(x=>!code||x.code===code);for(let x of reasons){let spans=(x.intervals||[]).map(s=>`${s.start_seconds.toFixed(2)}–${s.end_seconds.toFixed(2)}秒`).join('，');node('p',`${x.severity} / ${labels[x.code]||x.code} / ${x.camera||'文件级'}：${x.detail}${spans?'；回合内区间：'+spans:''}`,content);}
+let media=r.review_media||{};for(let [camera,view] of Object.entries(media)){if(code&&!reasons.some(x=>!x.camera||x.camera===camera))continue;let clips=(view.videos||[]).filter(v=>!code||v.reason===code);for(let clip of clips){node('p',`${camera} / ${labels[clip.reason]||clip.reason} / 原速片段（源文件时间 ${clip.start_seconds.toFixed(2)}–${clip.end_seconds.toFixed(2)}秒）`,content);video(`${view.path_prefix}/${clip.path}`,content);}if(view.overview){let d=node('details',undefined,content);node('summary',`${camera}：整段速览（2倍速，4Hz采样）${code&&!clips.length?'；本项无独立片段，请结合异常时间查看':''}`,d);video(`${view.path_prefix}/${view.overview}`,d);}if(view.render_error)node('p','视频导出失败：'+view.render_error,content);if((view.render_errors||[]).length)node('p','部分片段导出异常：'+view.render_errors.join('; '),content);}if(!Object.keys(media).length)node('p','无可播放片段；源文件无法读取时请查看报告原因。',content);let a=node('a','完整指标JSON',content);a.href=row.report;}catch(e){content.textContent='报告暂不可读：'+e.message;}}}
+async function refresh(manual=false){try{let [a,b]=await Promise.all([fetch('episodes.csv?t='+Date.now(),{cache:'no-store'}),fetch('progress.json?t='+Date.now(),{cache:'no-store'})]);if(!a.ok)throw Error('汇总CSV尚未生成');let next=csv(await a.text()),changed=next.length!==records.length;records=next;let p=b.ok?await b.json():{};$('state').textContent=`状态：${p.state||'未知'}；完成 ${p.completed_records!=null?p.completed_records:records.length}/${p.total_records!=null?p.total_records:'?'}；每30秒读取新结果。`;let playing=[...document.querySelectorAll('video')].some(v=>!v.paused&&!v.ended);categories();if(manual||(changed&&!playing)||!$('cards').children.length)await render();else if(changed)$('state').textContent+=' 有新结果，播放结束后点击刷新。';}catch(e){$('state').textContent=e.message+'；请通过HTTP服务打开本页。';}}
+$('category').onchange=()=>{page=0;render();};$('status').onchange=()=>{page=0;categories();render();};$('refresh').onclick=()=>refresh(true);$('prev').onclick=()=>{page--;render();};$('next').onclick=()=>{page++;render();};refresh(true);setInterval(()=>refresh(false),30000);
+</script></html>'''

@@ -1,0 +1,4 @@
+-r base.txt
+# Install an appropriate CUDA torch build separately if GPU inference is needed.
+torch>=2.6
+ultralytics>=8.4

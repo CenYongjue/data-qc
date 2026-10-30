@@ -1,0 +1,3 @@
+-r base.txt
+torch>=2.6
+PyNvVideoCodec==2.0.2

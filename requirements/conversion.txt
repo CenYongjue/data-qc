@@ -1,0 +1,5 @@
+-r base.txt
+# v2.1 migration imports official converter APIs; tested against 0.5.2.
+lerobot==0.5.2
+datasets>=4,<5
+numcodecs>=0.15,<1

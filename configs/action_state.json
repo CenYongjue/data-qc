@@ -1,0 +1,21 @@
+{
+  "max_delay_s": 0.5,
+  "min_overlap_frames": 30,
+  "min_joint_range_rad": 0.05,
+  "min_xcorr": 0.25,
+  "min_peak_margin": 0.02,
+  "min_active_joints": 2,
+  "command_deadband_rad": 0.0001,
+  "min_window_s": 0.025,
+  "min_target_norm": 0.03,
+  "min_response_norm": 0.002,
+  "reverse_cos": -0.3,
+  "positive_progress": 0.01,
+  "min_assessable_fraction": 0.2,
+  "min_assessable_windows": 10,
+  "review_reverse_fraction": 0.1,
+  "review_no_response_fraction": 0.5,
+  "fail_reverse_fraction": 0.6,
+  "enable_behavior_fail": false,
+  "plot_episodes": 8
+}

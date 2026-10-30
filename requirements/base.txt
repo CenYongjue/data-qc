@@ -1,0 +1,9 @@
+# CPU video + action QC. Tested versions are recorded in server-snapshot.txt.
+numpy>=2.0,<3
+scipy>=1.14,<2
+pandas>=2.2,<4
+pyarrow>=18,<27
+matplotlib>=3.9,<4
+av>=15.1,<16
+opencv-python-headless>=4.10,<6
+h5py>=3.11,<4

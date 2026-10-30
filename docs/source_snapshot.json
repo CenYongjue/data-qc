@@ -1,0 +1,305 @@
+{
+  "source": "/data_all/cenyj/scripts",
+  "files": [
+    {
+      "file": "scripts/README_action_state_qc.md",
+      "source_sha256": "5ae6dd8638e042fa500c9c9c28d8568b440548cd4bec7543bb626e489d437cf1",
+      "project_sha256": "5ae6dd8638e042fa500c9c9c28d8568b440548cd4bec7543bb626e489d437cf1",
+      "adapted": false
+    },
+    {
+      "file": "scripts/README_agibot_clean_v1.md",
+      "source_sha256": "11015220d225a57a852add90d03b748294ea1d83a0c4d0e880cbe8e7efa2a57f",
+      "project_sha256": "11015220d225a57a852add90d03b748294ea1d83a0c4d0e880cbe8e7efa2a57f",
+      "adapted": false
+    },
+    {
+      "file": "scripts/README_agibot_gripper_pilot.md",
+      "source_sha256": "6c8eb6106792ac4040914c4202fafcee82a9dcbeed2b1ff0529432e5ef4a6391",
+      "project_sha256": "6c8eb6106792ac4040914c4202fafcee82a9dcbeed2b1ff0529432e5ef4a6391",
+      "adapted": false
+    },
+    {
+      "file": "scripts/README_agibot_migration.md",
+      "source_sha256": "9728c5e69ad48c28812ac57fa3214fffd02a61cdbc857ebeb79d46801b56ba18",
+      "project_sha256": "9728c5e69ad48c28812ac57fa3214fffd02a61cdbc857ebeb79d46801b56ba18",
+      "adapted": false
+    },
+    {
+      "file": "scripts/README_agibot_quality_report.md",
+      "source_sha256": "33b67c05658537cd535f11aa403204cae405e4de08d4482089f99f7691f6a548",
+      "project_sha256": "33b67c05658537cd535f11aa403204cae405e4de08d4482089f99f7691f6a548",
+      "adapted": false
+    },
+    {
+      "file": "scripts/README_agibot_quality_with_gripper.md",
+      "source_sha256": "26adbf37f9dbece7496fec7a6a5f2084ed26d47740776be8109b6227a46233d0",
+      "project_sha256": "26adbf37f9dbece7496fec7a6a5f2084ed26d47740776be8109b6227a46233d0",
+      "adapted": false
+    },
+    {
+      "file": "scripts/README_egodex_video_qc.md",
+      "source_sha256": "281e4356a0258e5fac1c9a5da81ce3670b32013407e141638362aeecdf61b02c",
+      "project_sha256": "281e4356a0258e5fac1c9a5da81ce3670b32013407e141638362aeecdf61b02c",
+      "adapted": false
+    },
+    {
+      "file": "scripts/README_egodex_yolo_hand_qc.md",
+      "source_sha256": "6ea8ad1f36d226c5f58f9adae43dbdd059c3d50bf8e35d477fd40301862d3746",
+      "project_sha256": "6ea8ad1f36d226c5f58f9adae43dbdd059c3d50bf8e35d477fd40301862d3746",
+      "adapted": false
+    },
+    {
+      "file": "scripts/README_egodex_yolo_pipeline.md",
+      "source_sha256": "05725a9494a477fddc8983b4ca6279e44b8d7803dbd240587ff73ec7117fa802",
+      "project_sha256": "05725a9494a477fddc8983b4ca6279e44b8d7803dbd240587ff73ec7117fa802",
+      "adapted": false
+    },
+    {
+      "file": "scripts/README_mediapipe_hand_visibility.md",
+      "source_sha256": "72e0edbf019e165e93b67e285b52fd74759b8706c08dbe1b6107b7f42be9198f",
+      "project_sha256": "72e0edbf019e165e93b67e285b52fd74759b8706c08dbe1b6107b7f42be9198f",
+      "adapted": false
+    },
+    {
+      "file": "scripts/README_syndata_to_lerobot_v3.md",
+      "source_sha256": "24ed0d7bafe9620168e3123cecb639f986fa9797a74706579ca151f1cfcfef4d",
+      "project_sha256": "24ed0d7bafe9620168e3123cecb639f986fa9797a74706579ca151f1cfcfef4d",
+      "adapted": false
+    },
+    {
+      "file": "scripts/README_video_quality_pipeline_v2.md",
+      "source_sha256": "e051c2c5741e63ab19a7fc9cdfc39ebc8da087625eccddedd68088210b5444c6",
+      "project_sha256": "e051c2c5741e63ab19a7fc9cdfc39ebc8da087625eccddedd68088210b5444c6",
+      "adapted": false
+    },
+    {
+      "file": "scripts/action_state_qc.py",
+      "source_sha256": "3ea5f54e9e39e1ce673e05c71609f88880162eaac1899290c08d967747661097",
+      "project_sha256": "3ea5f54e9e39e1ce673e05c71609f88880162eaac1899290c08d967747661097",
+      "adapted": false
+    },
+    {
+      "file": "scripts/agibot_clean_v1.py",
+      "source_sha256": "3c7c40d859b56c27a326194dc4c3982ac7e99ed5db396d228a223e4920798951",
+      "project_sha256": "3c7c40d859b56c27a326194dc4c3982ac7e99ed5db396d228a223e4920798951",
+      "adapted": false
+    },
+    {
+      "file": "scripts/agibot_clean_v1_config.json",
+      "source_sha256": "f41a9b96d439cd4887323c2a4d2e6d1f2b602532807566c6390c17ce36391e26",
+      "project_sha256": "f41a9b96d439cd4887323c2a4d2e6d1f2b602532807566c6390c17ce36391e26",
+      "adapted": false
+    },
+    {
+      "file": "scripts/agibot_gripper_pilot.py",
+      "source_sha256": "cbb6a7695483a43753a64a00c288bcff27a6b59e42ac98cacdc2547328fb88de",
+      "project_sha256": "569d54841ac25f7f629cabd1f2418194368948955d43695f1b450e576e879e30",
+      "adapted": true
+    },
+    {
+      "file": "scripts/agibot_qc_config.json",
+      "source_sha256": "613053c350e0bd895b21962fa32c32422426259d183a8597346e89e0a102431f",
+      "project_sha256": "613053c350e0bd895b21962fa32c32422426259d183a8597346e89e0a102431f",
+      "adapted": false
+    },
+    {
+      "file": "scripts/agibot_quality_report.py",
+      "source_sha256": "69898ec813629a4980857ec9e74b3bc9cefb60fd39384d636aa897441145ea1a",
+      "project_sha256": "69898ec813629a4980857ec9e74b3bc9cefb60fd39384d636aa897441145ea1a",
+      "adapted": false
+    },
+    {
+      "file": "scripts/agibot_quality_with_gripper.py",
+      "source_sha256": "f640858be9bec4216fefc450e325405c83945288f251e40333cf0d5e2bf9aa97",
+      "project_sha256": "cb3c2b309dd6d2b278ba155ebc00d6851e29ec367c7ea34479f6aa0304059a20",
+      "adapted": true
+    },
+    {
+      "file": "scripts/benchmark_agibot_cpu_parallel.py",
+      "source_sha256": "41530faaf3b5980007d85ff5700b18ede5b5a77c5426d6fa2a54ddb305253060",
+      "project_sha256": "41530faaf3b5980007d85ff5700b18ede5b5a77c5426d6fa2a54ddb305253060",
+      "adapted": false
+    },
+    {
+      "file": "scripts/check_image_quality.py",
+      "source_sha256": "0cc03dbb7a9a441bf5d507d145d67245994cad167ec1a97379944c4f0e94c64b",
+      "project_sha256": "0cc03dbb7a9a441bf5d507d145d67245994cad167ec1a97379944c4f0e94c64b",
+      "adapted": false
+    },
+    {
+      "file": "scripts/cleaning_optimization_plan.md",
+      "source_sha256": "5d70388648d3199b59ff83325685ed851a10498587a456c58105ba039b524859",
+      "project_sha256": "5d70388648d3199b59ff83325685ed851a10498587a456c58105ba039b524859",
+      "adapted": false
+    },
+    {
+      "file": "scripts/egodex_video_qc.py",
+      "source_sha256": "d8f20548cf38ce920c7958c7de8b46265a24beb9221d3c01bc7d925025132404",
+      "project_sha256": "d8f20548cf38ce920c7958c7de8b46265a24beb9221d3c01bc7d925025132404",
+      "adapted": false
+    },
+    {
+      "file": "scripts/egodex_yolo_hand_qc.py",
+      "source_sha256": "80b7e34147bebb3997dffe8b6090e033abd61fb8405f74454f5a054c632ce5b0",
+      "project_sha256": "3294ec194f031044457024c21cd918c332ba2b3d73dbf9a6960f31cfb8a6049d",
+      "adapted": true
+    },
+    {
+      "file": "scripts/egodex_yolo_pipeline.py",
+      "source_sha256": "c751e17a5082b78ee4b15a32fccc9f356cf4584599faa02ba52e739fb50bd716",
+      "project_sha256": "7142d8c51690fee095755de3bab24f7c3e98bd0158cb0915bd13587347bce48e",
+      "adapted": true
+    },
+    {
+      "file": "scripts/export_agibot_large_trim_comparisons.py",
+      "source_sha256": "527fe685c47583c04e8c7600c5da6653c61185485ef1eb42ab79c04b95dc9d74",
+      "project_sha256": "527fe685c47583c04e8c7600c5da6653c61185485ef1eb42ab79c04b95dc9d74",
+      "adapted": false
+    },
+    {
+      "file": "scripts/export_agibot_problem_views.py",
+      "source_sha256": "acc8cfabaefdc669d06582389c612839de91c3b2608d2d14587bf4867d53e2a8",
+      "project_sha256": "acc8cfabaefdc669d06582389c612839de91c3b2608d2d14587bf4867d53e2a8",
+      "adapted": false
+    },
+    {
+      "file": "scripts/export_pass_review_samples.py",
+      "source_sha256": "d4e4d1aace4b05ef2d6b8eaaf4e63bda2b59b7577aa68937effef683ea43e120",
+      "project_sha256": "d4e4d1aace4b05ef2d6b8eaaf4e63bda2b59b7577aa68937effef683ea43e120",
+      "adapted": false
+    },
+    {
+      "file": "scripts/hifi_umi_qc_gpu_decode.py",
+      "source_sha256": "2be8eda2457e51afe91dee71590b548fe45f6dee943fca9f65a49b90a52690dd",
+      "project_sha256": "2be8eda2457e51afe91dee71590b548fe45f6dee943fca9f65a49b90a52690dd",
+      "adapted": false
+    },
+    {
+      "file": "scripts/hifi_umi_qc_gpu_pixels.py",
+      "source_sha256": "7ce7a55f58276dbe771349893406b0a0ada4a07b9266158663c41f212d931cba",
+      "project_sha256": "7ce7a55f58276dbe771349893406b0a0ada4a07b9266158663c41f212d931cba",
+      "adapted": false
+    },
+    {
+      "file": "scripts/hifi_umi_qc_no_block.py",
+      "source_sha256": "5fb5a3f863cec264fadd786c0f588f078c9cc20b0f12cba553549864f4b82dae",
+      "project_sha256": "5fb5a3f863cec264fadd786c0f588f078c9cc20b0f12cba553549864f4b82dae",
+      "adapted": false
+    },
+    {
+      "file": "scripts/hifi_umi_qc_persistent_gpu.py",
+      "source_sha256": "c9ad76d7881734c1663756799c9fef4bc54547ef844e6bd249128220570a3eb5",
+      "project_sha256": "c9ad76d7881734c1663756799c9fef4bc54547ef844e6bd249128220570a3eb5",
+      "adapted": false
+    },
+    {
+      "file": "scripts/mediapipe_hand_visibility.py",
+      "source_sha256": "8bdf068bb87e7da4e2440034ac06059dc7d9417b4f19b84caf11eb87972ba929",
+      "project_sha256": "ed16f72a2896a42266449ad753d97ecc216d755121bf1f3c2725a1d6e5940c83",
+      "adapted": true
+    },
+    {
+      "file": "scripts/migrate_lerobot_v21_to_v3.py",
+      "source_sha256": "a4bbf74e4595786ce85153898feffdba8b636ffd2aa8ca95d8fa49f0a4c556f1",
+      "project_sha256": "a4bbf74e4595786ce85153898feffdba8b636ffd2aa8ca95d8fa49f0a4c556f1",
+      "adapted": false
+    },
+    {
+      "file": "scripts/probe_agibot_gpu_decode.py",
+      "source_sha256": "f02ead7d32671702c7770105039390e1267cad7137ab53da5f8950f86468714a",
+      "project_sha256": "f02ead7d32671702c7770105039390e1267cad7137ab53da5f8950f86468714a",
+      "adapted": false
+    },
+    {
+      "file": "scripts/probe_gpu_quality.py",
+      "source_sha256": "2ba9fdd77b79f2c1807ad58fcea81a40e25fc922ff8fbceba459470601cc2a79",
+      "project_sha256": "2ba9fdd77b79f2c1807ad58fcea81a40e25fc922ff8fbceba459470601cc2a79",
+      "adapted": false
+    },
+    {
+      "file": "scripts/requirements_mediapipe_hand_qc.txt",
+      "source_sha256": "912fd6863d48ad78db74f06fbe3d724f6f101516ae1c4c032bb55ace0c4ce000",
+      "project_sha256": "912fd6863d48ad78db74f06fbe3d724f6f101516ae1c4c032bb55ace0c4ce000",
+      "adapted": false
+    },
+    {
+      "file": "scripts/summarize_video_qc_run.py",
+      "source_sha256": "4c5559c942fc50c53b19e911a26f3c12e953862869a89f7ca490016066e32d66",
+      "project_sha256": "4c5559c942fc50c53b19e911a26f3c12e953862869a89f7ca490016066e32d66",
+      "adapted": false
+    },
+    {
+      "file": "scripts/syndata_to_lerobot_v3.py",
+      "source_sha256": "6e8791034af315dcbecdbc7f219fe629c702af8f84b4b95eb6a371ab945aded7",
+      "project_sha256": "6e8791034af315dcbecdbc7f219fe629c702af8f84b4b95eb6a371ab945aded7",
+      "adapted": false
+    },
+    {
+      "file": "scripts/test_agibot_quality_report.py",
+      "source_sha256": "24013b356bd461e7ad07f1fec2b076f99ce6c7958820109d04f8892c453a5bd8",
+      "project_sha256": "24013b356bd461e7ad07f1fec2b076f99ce6c7958820109d04f8892c453a5bd8",
+      "adapted": false
+    },
+    {
+      "file": "scripts/test_syndata_to_lerobot_v3.py",
+      "source_sha256": "52568bda2c9977dd471867f382f89c2313b5a6fd9a57b0641abdca2e13cc8edf",
+      "project_sha256": "52568bda2c9977dd471867f382f89c2313b5a6fd9a57b0641abdca2e13cc8edf",
+      "adapted": false
+    },
+    {
+      "file": "scripts/validate_lerobot_v3_reader.py",
+      "source_sha256": "e18bc803d6ba0dd07bb7a8a03720ce912b5b4bea91d56828efc7f7c508ad96e6",
+      "project_sha256": "e18bc803d6ba0dd07bb7a8a03720ce912b5b4bea91d56828efc7f7c508ad96e6",
+      "adapted": false
+    },
+    {
+      "file": "scripts/video_qc_v2/gpu_quality.py",
+      "source_sha256": "60b2a7e024ac41163cc0624a22a16481bf7d71dc661f8fd834025307fbaa3f8d",
+      "project_sha256": "60b2a7e024ac41163cc0624a22a16481bf7d71dc661f8fd834025307fbaa3f8d",
+      "adapted": false
+    },
+    {
+      "file": "scripts/video_qc_v2/lerobot.py",
+      "source_sha256": "ff6d04999fd6022f0665d380e3455cd8e7179e270dc4b7eff7fe13faa195a3fd",
+      "project_sha256": "ff6d04999fd6022f0665d380e3455cd8e7179e270dc4b7eff7fe13faa195a3fd",
+      "adapted": false
+    },
+    {
+      "file": "scripts/video_qc_v2/operators.py",
+      "source_sha256": "e9cd01d374cd0264432f3d54b9b554c93a41eb70dea55cc8fb7fc2cef4325fb7",
+      "project_sha256": "e9cd01d374cd0264432f3d54b9b554c93a41eb70dea55cc8fb7fc2cef4325fb7",
+      "adapted": false
+    },
+    {
+      "file": "scripts/video_qc_v2/persistent_decode.py",
+      "source_sha256": "12196efb227df1e807d16bc65b866d35a3fe8eb9b872a6766e67bda8af7faee1",
+      "project_sha256": "12196efb227df1e807d16bc65b866d35a3fe8eb9b872a6766e67bda8af7faee1",
+      "adapted": false
+    },
+    {
+      "file": "scripts/video_qc_v2/review_page.py",
+      "source_sha256": "dfce8739b203cbb2f12d49bd42afe0f2ecbc12ccc8af20f9d00cb225b8ea7ead",
+      "project_sha256": "dfce8739b203cbb2f12d49bd42afe0f2ecbc12ccc8af20f9d00cb225b8ea7ead",
+      "adapted": false
+    },
+    {
+      "file": "scripts/video_qc_v2/worker.py",
+      "source_sha256": "2b829aca92817298ac3dc262aad77a962f011b8493510fa1421ff5370aa15330",
+      "project_sha256": "2b829aca92817298ac3dc262aad77a962f011b8493510fa1421ff5370aa15330",
+      "adapted": false
+    },
+    {
+      "file": "scripts/video_qc_v2_config.json",
+      "source_sha256": "0cb8af1c20c047317cf39f603246cdc04a071c01fd8843583baff976a549f344",
+      "project_sha256": "0cb8af1c20c047317cf39f603246cdc04a071c01fd8843583baff976a549f344",
+      "adapted": false
+    },
+    {
+      "file": "scripts/video_quality_pipeline_v2.py",
+      "source_sha256": "69b9e75a0152144fd6e0ddaea63ec7e371b8b4fb20a646b76c26f9cd9645e074",
+      "project_sha256": "8250015e70bb5effbc3f6fcc32991ce74b39913e4b69c85c34bd5aa68357136f",
+      "adapted": true
+    }
+  ]
+}

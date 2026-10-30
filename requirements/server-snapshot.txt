@@ -1,0 +1,15 @@
+# Observed QC environment; reference only, not a portable lockfile.
+numpy==2.2.6
+scipy==1.18.1
+pandas==3.1.0
+pyarrow==26.0.0
+matplotlib==3.11.2
+av==15.1.0
+opencv-python==5.0.0.93
+h5py==3.16.0
+torch==2.6.0+cu124
+ultralytics==8.4.190
+PyNvVideoCodec==2.0.2
+datasets==4.8.5
+# numcodecs: not installed in QC venv
+lerobot==0.5.2
